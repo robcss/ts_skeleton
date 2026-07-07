@@ -6,7 +6,7 @@ class Rover {
     public position: Position;
     public heading: string;
     constructor(position: Position, heading: Heading) {
-        this.position = { x: 2, y: 3 };
+        this.position = position;
         this.heading = heading;
     }
 
