@@ -10,48 +10,51 @@ class Rover {
         this.heading = heading;
     }
 
+    private turnLeft(): void {
+        switch (this.heading) {
+            case 'N':
+                this.heading = 'W'
+                break;
+            case 'E':
+                this.heading = 'N'
+                break;
+            case 'S':
+                this.heading = 'E'
+                break;
+            case 'W':
+                this.heading = 'S'
+                break;
+            default:
+                break;
+        }
+    }
+
+    private turnRight(): void {
+        switch (this.heading) {
+            case 'N':
+                this.heading = 'E'
+                break;
+            case 'E':
+                this.heading = 'S'
+                break;
+            case 'S':
+                this.heading = 'W'
+                break;
+            case 'W':
+                this.heading = 'N'
+                break;
+            default:
+                break;
+        }
+    }
+
     turn(direction: 'L' | 'R'): void {
 
-        if(direction === 'L'){
-            switch (this.heading) {
-                case 'N':
-                    this.heading = 'W'
-                    break;
-                case 'E':
-                    this.heading = 'N'
-                    break;
-                case 'S':
-                    this.heading = 'E'
-                    break;
-                case 'W':
-                    this.heading = 'S'
-                    break;
-                default:
-                    break;
-            }
+        if (direction === 'L') {
+            this.turnLeft()
         } else {
-            switch (this.heading) {
-                case 'N':
-                    this.heading = 'E'
-                    break;
-                case 'E':
-                    this.heading = 'S'
-                    break;
-                case 'S':
-                    this.heading = 'W'
-                    break;
-                case 'W':
-                    this.heading = 'N'
-                    break;
-                default:
-                    break;
-            }
+            this.turnRight()
         }
-
-
-
-
-
 
     }
 }
