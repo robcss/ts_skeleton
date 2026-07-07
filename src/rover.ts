@@ -1,5 +1,5 @@
 export type Heading = 'N' | 'E' | 'S' | 'W'
-type Position = { x: number, y: number };
+export type Position = { x: number, y: number };
 
 class Rover {
 
@@ -59,7 +59,23 @@ class Rover {
     }
 
     move(direction: string) {
-        this.position.y = 0
+
+        switch (this.heading) {
+            case 'N':
+                this.position.y--
+                break;
+            case 'S':
+                this.position.y++
+                break;
+            case 'E':
+                this.position.x--
+                break;
+            case 'W':
+                this.position.x++
+                break;
+            default:
+                break;
+        }
     }
 }
 
