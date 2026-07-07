@@ -10,24 +10,49 @@ class Rover {
         this.heading = heading;
     }
 
-    turn(direction: string): void {
+    turn(direction: 'L' | 'R'): void {
 
-        switch (this.heading) {
-            case 'N':
-                this.heading = 'W'
-                break;
-            case 'E':
-                this.heading = 'N'
-                break;
-            case 'S':
-                this.heading = 'E'
-                break;
-            case 'W':
-                this.heading = 'S'
-                break;
-            default:
-                break;
+        if(direction === 'L'){
+            switch (this.heading) {
+                case 'N':
+                    this.heading = 'W'
+                    break;
+                case 'E':
+                    this.heading = 'N'
+                    break;
+                case 'S':
+                    this.heading = 'E'
+                    break;
+                case 'W':
+                    this.heading = 'S'
+                    break;
+                default:
+                    break;
+            }
+        } else {
+            switch (this.heading) {
+                case 'N':
+                    this.heading = 'E'
+                    break;
+                case 'E':
+                    this.heading = 'S'
+                    break;
+                case 'S':
+                    this.heading = 'W'
+                    break;
+                case 'W':
+                    this.heading = 'N'
+                    break;
+                default:
+                    break;
+            }
         }
+
+
+
+
+
+
     }
 }
 
