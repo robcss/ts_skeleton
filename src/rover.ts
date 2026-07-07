@@ -10,7 +10,7 @@ class Rover {
         this.heading = heading;
     }
 
-    move(command: string): void {
+    turn(direction: string): void {
 
         switch (this.heading) {
             case 'N':
