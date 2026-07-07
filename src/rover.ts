@@ -57,6 +57,10 @@ class Rover {
         }
 
     }
+
+    move(direction: string) {
+        this.position.y = 0
+    }
 }
 
 export default Rover;
