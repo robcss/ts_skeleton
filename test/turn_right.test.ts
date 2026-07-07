@@ -4,7 +4,10 @@ import Rover, { Heading } from "../src/rover";
 
 describe('Turn right', () => {
 
-    it('', () => {
+    it(`
+    Given a rover is initialised facing <start_direction>
+    When the rover receives the command "R"
+    Then the rover should be facing <end_direction>`, () => {
 
         const directions: {start: Heading, end: Heading}[] = [{
             start: 'N',
