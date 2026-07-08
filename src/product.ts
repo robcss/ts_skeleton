@@ -1,8 +1,22 @@
-type Stock = { hold: number }
 
 export class Product {
+    hold: number
+    stock: number
 
-    getStock(): Stock {
-        return { hold: 1 }
+    constructor(stock: number){
+        this.stock = stock
+        this.hold = 0
+    }
+
+    getHold(): number {
+        return this.hold
+    }
+
+    setHold(quantity: number): void {
+        this.hold = quantity
+    }
+
+    getStock(): number {
+        return this.stock
     }
 }
