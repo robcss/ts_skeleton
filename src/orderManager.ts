@@ -1,5 +1,5 @@
-export class OrderManager {
+export class Order {
     addItem(productId: number): void {
-        
+
     }
 }

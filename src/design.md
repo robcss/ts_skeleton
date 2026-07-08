@@ -1,4 +1,4 @@
-OrderManager
+Order
 Order
 Order Item
 Item quantity
