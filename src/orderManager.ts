@@ -1,5 +1,7 @@
+import { Product } from "./product";
+
 export class Order {
-    addItem(productId: number): void {
+    addItem(product: Product, quantity: number): void {
 
     }
 }

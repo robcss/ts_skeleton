@@ -1,8 +1,8 @@
 type Stock = { hold: number }
 
-export class Warehouse {
+export class Product {
 
-    getStock(productId: number): Stock {
+    getStock(): Stock {
         return { hold: 1 }
     }
 }
